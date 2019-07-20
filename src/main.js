@@ -42,7 +42,12 @@ var store = new Vuex.Store({
     }
 
 })
-
+//总结：
+//1. state 中的数据，不能直接修改，如果想要修改，必须通过 mutations
+//2. 如果组件想要直接从 state 上获取数据，需要 this.$store.state.***
+//3. 如果组件，想要修改数据，必须使用 mutations 提供的方法，需要通过 this.$store.commit('方法名'，唯一的参数)
+//4. store 中 state 上的数据，在对外提供的时候，如果需要做一层包装，那么，推荐使用 getters,
+//如果需要引用 getters 中的属性,则用 this.$store.getters.属性名进行引用
 import app from './App.vue'
 
 var vm = new Vue({
