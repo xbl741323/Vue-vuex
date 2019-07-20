@@ -1,6 +1,6 @@
 <template>
   <div>
-    当前数量为：
+    <h3>{{ $store.getters.optCount }}</h3>
   </div>
 </template>
 
@@ -8,7 +8,7 @@
 export default {
   data() {
     return {
-    //   count: 0
+      //   count: 0
     };
   }
 };
